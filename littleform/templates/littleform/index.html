@@ -1,0 +1,91 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'littleform/index.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'littleform/jquery-confirm.css' %}"/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="{% static 'littleform/jquery-confirm.js' %}"></script>
+<!------ Include the above in your HEAD tag ---------->
+<br/>
+<br/>
+
+<section class="login-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 banner-sec">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="{% static 'littleform/imgs/01.png' %}">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid" src="{% static 'littleform/imgs/02.png' %}">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block img-fluid" src="{% static 'littleform/imgs/03.png' %}">
+                </div>
+            </div>
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">О себе</h2>
+                <form class="login-form" action="inquiry" method="post"> {% csrf_token %}
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">ФИО</label>
+                        <input name="username" required type="text" class="form-control" placeholder="Фамилия Имя Отчество">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput1">Номер телефона</label>
+                        <input name="phone_number" required type="text" class="form-control" placeholder="+7 9...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">E-mail</label>
+                        <input required name="email" type="text" class="form-control" placeholder="example@ex.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Ссылка на профиль в соц сетях</label>
+                        <input required name="link_sns" type="text" class="form-control" placeholder="https://vk.com/example">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Образование</label>
+                        <input required name="education" type="text" class="form-control" placeholder="Укажите ВУЗ в которым вы учитесь/учились, курс/год окончания">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Какие языки программирования вам интересны?</label>
+                        <input required name="languages" type="text" class="form-control" placeholder="Python, JS, PHP, что-то другое">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Есть ли какой-то опыт общения с языками программирования?</label>
+                        <textarea name="experience" class="form-control" placeholder="Да/Нет, можете описать что-то подробно"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea2">Есть ли у вас код, который вы можете показать, если есть ссылка на ваш публичный репозиторий или иное.(лабораторные работы в том числе)?</label>
+                        <textarea name="link_code" class="form-control" placeholder="https://github.com/example"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-check-label">
+                            <input name="agreement" required type="checkbox" class="form-check-input">
+                            Cогласен на обработку персональных данных
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <a class="demo-1"><button type="submit" class="btn btn-login float-right">Хочу в школу!!!</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if message %}
+<script type="text/javascript">$('button').click(function(){$.alert({title:'',
+animation:'zoom',
+content:'Спасибо за вашу анкету, мы с вами обязательно свяжемся!'
+});});</script>
+{% endif %}
