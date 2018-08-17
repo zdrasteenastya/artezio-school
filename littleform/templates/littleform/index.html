@@ -6,9 +6,8 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="{% static 'littleform/jquery-confirm.js' %}"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <!------ Include the above in your HEAD tag ---------->
-<br/>
-<br/>
 
 <section class="login-block">
     <div class="container">
@@ -74,8 +73,10 @@
                             Cогласен на обработку персональных данных
                         </label>
                     </div>
+                    <center><div class="g-recaptcha" data-sitekey="6LeRF2oUAAAAAOU1kJ8wETOfZIKBndJDjVfvbO3c"></div></center>
+                    <br/>
                     <div class="form-check">
-                        <a class="demo-1"><button type="submit" class="btn btn-login float-right">Хочу в школу!!!</button></a>
+                        <a class="demo-1"><button type="submit" class="btn btn-login float-right">Хочу в школу!</button></a>
                     </div>
                 </form>
             </div>
@@ -83,9 +84,30 @@
     </div>
 </section>
 
-{% if message %}
-<script type="text/javascript">$('button').click(function(){$.alert({title:'',
+{% if success %}
+<script>$.alert({title:'',
 animation:'zoom',
 content:'Спасибо за вашу анкету, мы с вами обязательно свяжемся!'
-});});</script>
+});</script>
+{% endif %}
+
+{% if recaptcha %}
+<script>$.alert({title:'',
+animation:'zoom',
+content:'Гугло-галка тоже обязательна'
+});</script>
+{% endif %}
+
+{% if phone_number %}
+<script>$.alert({title:'',
+animation:'zoom',
+content:'Мы очень хотим с вами связаться, пожалуйста, укажите правильный номер телефона'
+});</script>
+{% endif %}
+
+{% if email %}
+<script>$.alert({title:'',
+animation:'zoom',
+content:'Мы очень хотим с вами связаться, пожалуйста, укажите правильный e-mail'
+});</script>
 {% endif %}

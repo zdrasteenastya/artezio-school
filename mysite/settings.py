@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'snowpenguin.django.recaptcha2',
     'littleform'
 ]
 
@@ -71,6 +72,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
+RECAPTCHA_PRIVATE_KEY = '6LeRF2oUAAAAADqNhxHj8WzZMy8qYGiZowLcNEBL'
+RECAPTCHA_PUBLIC_KEY = '6LeRF2oUAAAAAOU1kJ8wETOfZIKBndJDjVfvbO3c'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
