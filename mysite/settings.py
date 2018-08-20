@@ -72,8 +72,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-RECAPTCHA_PRIVATE_KEY = '6LeRF2oUAAAAADqNhxHj8WzZMy8qYGiZowLcNEBL'
-RECAPTCHA_PUBLIC_KEY = '6LeRF2oUAAAAAOU1kJ8wETOfZIKBndJDjVfvbO3c'
+RECAPTCHA_PRIVATE_KEY = '6Lcn4moUAAAAADZ1diHq8Y2dbQxqdKaRz7CaLwBO'
+RECAPTCHA_PUBLIC_KEY = '6Lcn4moUAAAAALwli3YopWVLDemcQhcBNRZMQx5c'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
