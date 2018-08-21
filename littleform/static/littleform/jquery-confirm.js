@@ -120,7 +120,7 @@ var jconfirm;
     };
 jconfirm.pluginDefaults = {
         type: 'alert',
-        template: '<center><div class="jconfirm"><div class="container1"><div class="row"><div class="col-md-6 col-md-offset-3"><div class="jconfirm-box"><div class="title"></div><div class="content"></div><div class="buttons pull-right"></div><div class="jquery-clear"></div></div></div></div></div></div></center>',
+        template: '<div class="jconfirm"><div class="container1"><div class="col-md-3 col-md-offset-3 offset-md-3"><div class="jconfirm-box"><div class="title"></div><div class="content"></div><div class="buttons pull-right"></div><div class="jquery-clear"></div></div></div></div></div>',
         title: 'Hello',
         content: 'Are you sure to continue?',
         icon: '',
