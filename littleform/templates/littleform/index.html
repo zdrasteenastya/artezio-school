@@ -48,27 +48,31 @@
                 <h2 class="text-center">О себе</h2>
                 <form class="login-form" action="inquiry" method="post"> {% csrf_token %}
                     <div class="form-group">
-                        <label for="formGroupExampleInput">ФИО</label>
+                        <label for="formGroupExampleInput">ФИО<span style="color:#DE6262">*</span></label>
                         <input name="username" required type="text" class="form-control" placeholder="Фамилия Имя Отчество">
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput1">Номер телефона</label>
+                        <label for="formGroupExampleInput1">Номер телефона<span style="color:#DE6262">*</span></label>
                         <input name="phone_number" required type="text" class="form-control" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">E-mail</label>
+                        <label for="exampleInputEmail1">E-mail<span style="color:#DE6262">*</span></label>
                         <input required name="email" type="text" class="form-control" placeholder="example@ex.com">
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Ссылка на профиль в соц сетях</label>
+                        <label for="formGroupExampleInput2">Ссылка на профиль в соц сетях<span style="color:#DE6262">*</span></label>
                         <input required name="link_sns" type="text" class="form-control" placeholder="https://vk.com/example">
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Образование</label>
+                        <label for="formGroupExampleInput2">Образование<span style="color:#DE6262">*</span></label>
                         <input required name="education" type="text" class="form-control" placeholder="Укажите ВУЗ в которым вы учитесь/учились, курс/год окончания">
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Какие языки программирования вам интересны?</label>
+                        <label for="formGroupExampleInput2">Какой у вас уровень английского языка?<span style="color:#DE6262">*</span></label>
+                        <input required name="english" type="text" class="form-control" placeholder="London is the capital of GB, isn't it?">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Какие языки программирования вам интересны?<span style="color:#DE6262">*</span></label>
                         <input required name="languages" type="text" class="form-control" placeholder="Python, JS, PHP, что-то другое">
                     </div>
                     <div class="form-group">
@@ -82,7 +86,7 @@
                     <div class="form-group">
                         <label class="form-check-label">
                             <input name="agreement" required type="checkbox" class="form-check-input">
-                            Cогласен на обработку персональных данных
+                            Cогласен на обработку персональных данных<span style="color:#DE6262">*</span>
                         </label>
                     </div>
                     <center><div class="g-recaptcha" data-sitekey="6Lcn4moUAAAAALwli3YopWVLDemcQhcBNRZMQx5c"></div></center>

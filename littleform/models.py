@@ -9,6 +9,7 @@ class Junior(models.Model):
     email = models.CharField(max_length=50)
     link_sns = models.CharField(max_length=200)
     education = models.CharField(max_length=200)
+    english = models.CharField(max_length=200)
     languages = models.TextField()
     experience = models.TextField()
     link_code = models.TextField()
