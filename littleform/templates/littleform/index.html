@@ -17,26 +17,16 @@
         <div class="row">
             <div class="col-md-8 banner-sec">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
+                    <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block img-fluid" src="{% static 'littleform/imgs/01.png' %}">
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block img-fluid" src="{% static 'littleform/imgs/02.png' %}">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block img-fluid" src="{% static 'littleform/imgs/03.png' %}">
                 </div>
                 <div class="container1">
                     <br/>
                     <div class="text-center center-block">
+                        <a href="https://www.artezio.com/"><img class="social-ar" height="70 px"src="{% static 'littleform/imgs/artezio_icon.png' %}"></a>
                         <a href="mailto:academy@artezio.com" class="fa fa-envelope-square"><i id="social-em" class="fa fa-envelope fa-3x social"></i></a>
                         <a href="https://www.vk.com/artezio" class="fa fa-vk-square"><i id="social-vk" class="fa fa-vk fa-3x social"></i></a>
                         <a href="https://www.facebook.com/Artezio.ru"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
@@ -81,15 +71,19 @@
                         <textarea name="experience" class="form-control" placeholder="Да/Нет, можете описать что-то подробно"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea2">Есть ли у вас код, который вы можете показать, если есть ссылка на ваш публичный репозиторий или иное.(лабораторные работы в том числе)?</label>
+                        <label for="exampleFormControlTextarea2">Есть ли у вас код, который вы можете показать? Вы можете поделиться ссылкой на ваш публичный репозиторий или прикрепить файл(не более 10МБ)</label>
                         <textarea name="link_code" class="form-control" placeholder="https://github.com/example"></textarea>
                     </div>
                     <div class="form-group">
+                        <input name="file" class="btn-file" type="file" id="files-input-upload">
+                    </div>
+                    <div class="form-check">
                         <label class="form-check-label">
                             <input name="agreement" required type="checkbox" class="form-check-input">
                             Cогласен на обработку персональных данных<span style="color:#DE6262">*</span>
                         </label>
                     </div>
+                    <br/>
                     <center><div class="g-recaptcha" data-sitekey="6Lcn4moUAAAAALwli3YopWVLDemcQhcBNRZMQx5c"></div></center>
                     <br/>
                     <div class="form-check">
