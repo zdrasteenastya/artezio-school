@@ -21,8 +21,13 @@ def inquiry(request):
             return render_main_page(request, {'email': True})
 
         form_data = {key: value for key, value in request.POST.items() if not key.startswith(('csr', 'g-recaptcha'))}
+        try:
+            form_data.update({'file': request.FILES['file']})
+        except Exception:
+            pass
         jun = Junior(**form_data)
         jun.save()
+
 
         return render_main_page(request, {'success': True})
     else:

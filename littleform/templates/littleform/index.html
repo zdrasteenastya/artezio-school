@@ -37,7 +37,7 @@
             </div>
             <div class="col-md-4 login-sec">
                 <h2 class="text-center">О себе</h2>
-                <form class="login-form" action="inquiry" method="post"> {% csrf_token %}
+                <form class="login-form" action="inquiry" method="post" enctype="multipart/form-data"> {% csrf_token %}
                     <div class="form-group">
                         <label for="formGroupExampleInput">ФИО<span style="color:#DE6262">*</span></label>
                         <input name="username" required type="text" class="form-control" placeholder="Фамилия Имя Отчество">
@@ -51,8 +51,8 @@
                         <input required name="email" type="text" class="form-control" placeholder="example@ex.com">
                     </div>
                     <div class="form-group">
-                        <label for="formGroupExampleInput2">Ссылка на профиль в соц сетях<span style="color:#DE6262">*</span></label>
-                        <input required name="link_sns" type="text" class="form-control" placeholder="https://vk.com/example">
+                        <label for="formGroupExampleInput2">Ссылка на профиль в соц сетях</label>
+                        <input name="link_sns" type="text" class="form-control" placeholder="https://vk.com/example">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Образование<span style="color:#DE6262">*</span></label>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Какие языки программирования вам интересны?<span style="color:#DE6262">*</span></label>
-                        <input required name="languages" type="text" class="form-control" placeholder="Python, JS, PHP, что-то другое">
+                        <input required name="languages" type="text" class="form-control" placeholder="Python, Javascript, PHP, что-то другое">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Есть ли какой-то опыт общения с языками программирования?</label>
@@ -75,7 +75,7 @@
                         <textarea name="link_code" class="form-control" placeholder="https://github.com/example"></textarea>
                     </div>
                     <div class="form-group">
-                        <input name="file" class="btn-file" type="file" id="files-input-upload">
+                        <input name="file" type="file" id="files-input-upload">
                     </div>
                     <div class="form-check">
                         <label class="form-check-label">

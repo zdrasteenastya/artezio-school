@@ -14,6 +14,7 @@ class Junior(models.Model):
     experience = models.TextField()
     link_code = models.TextField()
     agreement = models.BooleanField(default=False)
+    file = models.FileField(upload_to='user_files/')
 
     def __str__(self):
         return self.username.encode('utf-8')
