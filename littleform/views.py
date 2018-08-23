@@ -2,8 +2,8 @@
 import re
 
 from django.shortcuts import render
+from django.utils import timezone
 from .models import Junior
-
 
 def index(request):
     return render(request, 'littleform/index.html')
@@ -21,6 +21,7 @@ def inquiry(request):
             return render_main_page(request, {'email': True})
 
         form_data = {key: value for key, value in request.POST.items() if not key.startswith(('csr', 'g-recaptcha'))}
+        form_data.update({'data_passing': timezone.now()})
         try:
             form_data.update({'file': request.FILES['file']})
         except Exception:

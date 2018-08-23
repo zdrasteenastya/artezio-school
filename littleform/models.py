@@ -5,6 +5,7 @@ from django.db import models
 
 class Junior(models.Model):
     username = models.CharField(max_length=200, verbose_name=u"ФИО")
+    data_passing = models.DateTimeField(verbose_name=u"Дата заполнения")
     phone_number = models.CharField(max_length=12, verbose_name=u"Номер телефона")
     email = models.CharField(max_length=50, verbose_name=u"E-mail")
     link_sns = models.CharField(max_length=200, verbose_name=u"Ссылка на профиль в соц сетях")
