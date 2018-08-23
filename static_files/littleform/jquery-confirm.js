@@ -140,4 +140,4 @@ jconfirm.pluginDefaults = {
     };
 })(jQuery);
 
-//my
+//all
